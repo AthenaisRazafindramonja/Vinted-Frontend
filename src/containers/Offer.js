@@ -27,11 +27,7 @@ const Offer = () => {
   ) : (
     <div className="card-offer">
       <div className="offer-pic">
-        <img
-          className="img"
-          src={data.product_image.secure_url}
-          alt={data.product_name}
-        />
+        <img src={data.product_image.secure_url} alt={data.product_name} />
       </div>
       <div className="card-details1">
         <span>MARQUE</span>
