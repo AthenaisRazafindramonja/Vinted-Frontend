@@ -24,11 +24,40 @@ const Home = () => {
   return isLoading ? (
     <p>En cours de chargement...</p>
   ) : (
-    <div className="container">
+    <div className="card-wrapper">
       {data.map((offer) => {
         return (
           <Link key={offer._id} to={`/offer/${offer._id}`}>
-            <h4>{offer.product_name}</h4>
+            <div className="card-container">
+              <div className="card-user">
+                {offer.owner.account.avatar ? (
+                  <img
+                    src={offer.owner.account.avatar.secure_url}
+                    alt={offer.product_name}
+                  />
+                ) : null}
+                <span>{offer.owner.account.username}</span>
+              </div>
+              <div>
+                <img
+                  src={offer.product_image.secure_url}
+                  alt={offer.product_name}
+                />
+                <div className="card-price-size-brand">
+                  <span>{offer.product_price} €</span>
+                  {offer.product_details.map((offer, index) => {
+                    return offer.TAILLE ? (
+                      <span key={index}>{offer.TAILLE}</span>
+                    ) : null;
+                  })}
+                  {offer.product_details.map((offer, index) => {
+                    return offer.MARQUE ? (
+                      <span key={index}>{offer.MARQUE}</span>
+                    ) : null;
+                  })}
+                </div>
+              </div>
+            </div>
           </Link>
         );
       })}

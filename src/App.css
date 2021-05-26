@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+/* GLOBAL RULES */
+
+link,
+a {
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HOME */
+.card-wrapper {
+  width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto auto;
+}
+.card-container {
+  width: 235px;
+  padding: 0 6px 16px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-user {
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-user > img {
+  height: 25px;
+  width: 25px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+.card-user > span {
+  color: #999;
+  font-size: 12px;
+}
+.product_img {
+  height: 200px;
+  width: 159px;
+}
+.card-container div:last-child img {
+  height: 360px;
+  width: 235px;
+  object-fit: cover;
+}
+.card-price-size-brand {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 8px;
+}
+.card-price-size-brand span:first-child {
+  font-size: 14px;
+  color: black;
+}
+.card-price-size-brand span:not(:first-child) {
+  font-size: 12px;
+  color: #999;
 }
 
-.App-link {
-  color: #61dafb;
+/* OFFER */
+.card-offer {
+  max-width: 2000px;
+  background-color: #ebedee;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.offer-pic > img {
+  height: 20;
+  width: 20;
+  background-color: red;
+}
+.card-details1 {
+  display: flex;
+  flex-direction: column;
+}
+.card-details2 {
+  display: flex;
+  flex-direction: column;
 }
