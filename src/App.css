@@ -2,6 +2,7 @@
 link,
 a {
   text-decoration: none;
+  color: #2cb1ba;
 }
 
 /* HEADER */
@@ -12,7 +13,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1280px;
+  max-width: 1280px;
   margin: auto;
   padding: 10px 0;
   margin-bottom: 30px;
@@ -101,7 +102,7 @@ a {
 
 /* HOME */
 .card-wrapper {
-  width: 1280px;
+  max-width: 1280px;
   display: flex;
   flex-wrap: wrap;
   margin: 30px auto auto;
@@ -154,12 +155,13 @@ a {
 /* OFFER */
 .offer-body {
   background-color: #ebedee;
+  height: calc(100vh - 60px);
 }
 .card-offer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 40px;
+  padding-top: 100px;
 }
 
 .offer-pic > img {
@@ -171,8 +173,8 @@ a {
 .card-block-details {
   background-color: white;
   border: 1px solid white;
-  width: 400px;
-  height: 500px;
+  width: 300px;
+  height: 550px;
   margin-left: 500px;
 }
 .offer-price {
@@ -184,12 +186,18 @@ a {
   font-size: 14px;
   padding-left: 10px;
 }
+.details {
+  display: flex;
+}
 .elem {
   color: #999;
+  flex: 50%;
 }
 .elem2 {
   font-weight: bold;
   color: #666666;
+  display: 50%;
+  background-color: red;
 }
 
 /* SIGN UP  */
@@ -243,7 +251,7 @@ a {
 }
 .signup :link {
   text-decoration: none;
-  color: #2cb1ba;
+  color: red;
   font-size: 12px;
   margin-top: 20px;
   text-align: center;
@@ -300,8 +308,9 @@ a {
   background-color: #ebedee;
 }
 .publish {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
+  padding-top: 20px;
 }
 .file-block {
   border: 1px solid white;
@@ -311,27 +320,53 @@ a {
 .article-block {
   margin-top: 20px;
   border: 1px solid white;
-  height: 200px;
+  height: 150px;
   background-color: white;
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.block-section {
+  display: flex;
+  margin-bottom: 20px;
+}
+.block-section > span {
+  font-size: 12px;
+}
+
+.title-text {
+  flex: 50%;
+  font-size: 14px;
+}
+.input-text {
+  flex: 50%;
+  border: none;
+  border-bottom: 1px solid #ebedee;
+}
+.textarea {
+  font-family: inherit;
 }
 .details-block {
   margin-top: 20px;
   border: 1px solid white;
-  height: 200px;
+  height: 400px;
   background-color: white;
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .price-block {
   margin-top: 20px;
   border: 1px solid white;
-  height: 200px;
+  height: 150px;
   background-color: white;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .last-part > input {
@@ -344,6 +379,7 @@ a {
   font-size: 12px;
   text-align: center;
   margin-right: 20px;
+  cursor: pointer;
 }
 .last-part > p {
   font-size: 11px;

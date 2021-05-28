@@ -55,68 +55,101 @@ const Publish = ({ userToken }) => {
               onChange={(event) => setFile(event.target.files[0])}
             />
           </div>
+
           <div className="article-block">
-            <h4>Titre</h4>
-            <input
-              type="text"
-              placeholder="ex : Chemise Sézane verte"
-              value={title}
-              onChange={(event) => setTitle(event.target.value)}
-            />
-            <h4>Décris ton article</h4>
-            <textarea
-              placeholder="porté quelques fois, taille correctement"
-              value={description}
-              onChange={(event) => setDescription(event.target.value)}
-            />
+            <div className="block-section">
+              <h4 className="title-text">Titre</h4>
+              <input
+                className="input-text"
+                type="text"
+                placeholder="ex : Chemise Sézane verte"
+                value={title}
+                onChange={(event) => setTitle(event.target.value)}
+              />
+            </div>
+
+            <div className="block-section">
+              <h4 className="title-text">Décris ton article</h4>
+              <textarea
+                className="textarea input-text"
+                placeholder="ex : porté quelques fois, taille correctement"
+                value={description}
+                onChange={(event) => setDescription(event.target.value)}
+              />
+            </div>
           </div>
           <div className="details-block">
-            <h4>Marque</h4>
-            <input
-              type="text"
-              placeholder="ex : Zara"
-              value={brand}
-              onChange={(event) => setBrand(event.target.value)}
-            />
-            <h4>Taille</h4>
-            <input
-              type="text"
-              placeholder="ex : S"
-              value={size}
-              onChange={(event) => setSize(event.target.value)}
-            />
-            <h4>État</h4>
-            <input
-              type="text"
-              placeholder="ex : Très bon état"
-              value={condition}
-              onChange={(event) => setCondition(event.target.value)}
-            />
-            <h4>Couleur</h4>
-            <input
-              type="text"
-              placeholder="ex : Noir"
-              value={color}
-              onChange={(event) => setColor(event.target.value)}
-            />
-            <h4>Emplacement</h4>
-            <input
-              type="text"
-              placeholder="ex : Paris"
-              value={city}
-              onChange={(event) => setCity(event.target.value)}
-            />
+            <div className="block-section">
+              <h4 className="title-text">Marque</h4>
+              <input
+                className="input-text"
+                type="text"
+                placeholder="ex : Zara"
+                value={brand}
+                onChange={(event) => setBrand(event.target.value)}
+              />
+            </div>
+
+            <div className="block-section">
+              <h4 className="title-text">Taille</h4>
+              <input
+                className="input-text"
+                type="text"
+                placeholder="ex : S / 36"
+                value={size}
+                onChange={(event) => setSize(event.target.value)}
+              />
+            </div>
+
+            <div className="block-section">
+              <h4 className="title-text">État</h4>
+              <input
+                className="input-text"
+                type="text"
+                placeholder="ex : Très bon état"
+                value={condition}
+                onChange={(event) => setCondition(event.target.value)}
+              />
+            </div>
+
+            <div className="block-section">
+              <h4 className="title-text">Couleur</h4>
+              <input
+                className="input-text"
+                type="text"
+                placeholder="ex : Noir"
+                value={color}
+                onChange={(event) => setColor(event.target.value)}
+              />
+            </div>
+
+            <div className="block-section">
+              <h4 className="title-text">Emplacement</h4>
+              <input
+                className="input-text"
+                type="text"
+                placeholder="ex : Paris"
+                value={city}
+                onChange={(event) => setCity(event.target.value)}
+              />
+            </div>
           </div>
+
           <div className="price-block">
-            <h4>Prix</h4>
-            <input
-              type="number"
-              placeholder="0,00 €"
-              value={price}
-              onChange={(event) => setPrice(event.target.value)}
-            />
-            <input type="checkbox" />
-            <span>Je suis intéressé(e) par les échanges</span>
+            <div className="block-section">
+              <h4 className="title-text">Prix</h4>
+              <input
+                className="input-text"
+                type="number"
+                placeholder="0,00 €"
+                value={price}
+                onChange={(event) => setPrice(event.target.value)}
+              />
+            </div>
+            <div className="block-section">
+              <input type="checkbox" />
+              <span>Je suis intéressé(e) par les échanges</span>
+            </div>
           </div>
           <div className="last-part">
             <p>

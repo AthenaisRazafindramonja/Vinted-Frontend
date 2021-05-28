@@ -36,9 +36,9 @@ const Offer = () => {
             {data.product_details.map((elem) => {
               const keys = Object.keys(elem);
               return (
-                <div>
-                  <span className="elem">{keys[0]}</span>
-                  <span className="elem2">{elem[keys[0]]}</span>
+                <div className="details">
+                  <p className="elem">{keys[0]}</p>
+                  <p className="elem2">{elem[keys[0]]}</p>
                 </div>
               );
             })}
