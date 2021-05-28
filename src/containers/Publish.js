@@ -49,11 +49,19 @@ const Publish = ({ userToken }) => {
         <h2>Vends ton article</h2>
         <form onSubmit={handleSubmit}>
           <div className="file-block">
-            <span>Ajoute jusqu'à 20 photos. Voir astuces</span>
-            <input
-              type="file"
-              onChange={(event) => setFile(event.target.files[0])}
-            />
+            <p>
+              Ajoute jusqu'à 20 photos.<span> Voir astuces</span>{" "}
+            </p>
+            <div className="card-file-design">
+              <div className="file-design">
+                <label htmlFor="file">+ Ajoute des photos</label>
+                <input
+                  id="file"
+                  type="file"
+                  onChange={(event) => setFile(event.target.files[0])}
+                />
+              </div>
+            </div>
           </div>
 
           <div className="article-block">
@@ -157,8 +165,9 @@ const Publish = ({ userToken }) => {
               un non-professionnel sur Vinted encourt les sanctions prévues à
               l'Article <span>L.132-2 </span> du Code de la Consommation.
             </p>
-
-            <input type="submit" value="Ajouter" />
+            <div className="button-add">
+              <input type="submit" value="Ajouter" />
+            </div>
           </div>
         </form>
       </div>
